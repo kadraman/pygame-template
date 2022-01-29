@@ -14,6 +14,11 @@ if __name__ == "__main__":
     # setup mixer to avoid sound lag
     pg.mixer.pre_init(44100, -16, 2, 2048)
     pg.init()
+    pg.mixer.init()
+    # hide the mouse cursor
+    pg.mouse.set_visible(0)
+    # set windows title
+    pg.display.set_caption(constants.TITLE)
     screen = pg.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
     # the various states that the game can be in
     states = {

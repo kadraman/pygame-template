@@ -1,15 +1,17 @@
+AUTHOR = ""
 TITLE = "PyGame Template"
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 800
 FONT_SIZE = 24
 FPS = 60
-ENEMY_MOVE_DOWN = 32
+ENEMY_MOVE_DOWN = 16
 SPRITE_SHEET = './assets/images/spritesheet.png'
 DEFAULT_FONT = './assets/fonts/BarcadeBrawlRegular.ttf'
 DEFAULT_BACKGROUND = './assets/images/background.png'
-
+DEFAULT_FONT_SIZE = 18
 TXT_GAME_OVER = 'Press ENTER to go to main menu, R to restart or ESC to quit'
 TXT_CREDITS = 'This game was written by ...'
+PLAY_SOUNDS = True
 
 '''
 locations of sprites in sprite sheet

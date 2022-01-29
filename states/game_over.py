@@ -10,7 +10,7 @@ import constants
 class GameOver(BaseState):
     def __init__(self):
         super(GameOver, self).__init__()
-        self.title = self.font.render("Game Over", True, pg.Color("white"))
+        self.title = self.default_font.render("Game Over", True, pg.Color("white"))
         self.title_rect = self.title.get_rect(center=self.screen_rect.center)
         self.font2 = pg.font.Font(constants.DEFAULT_FONT, 10)
         self.instructions = self.font2.render(constants.TXT_GAME_OVER,
