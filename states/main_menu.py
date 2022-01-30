@@ -14,10 +14,14 @@ class MainMenu(BaseState):
         self.options = ["Start Game", "Quit Game"]
         self.next_state = "GAME_PLAY"
 
+        self.fancy_text_1 = None
+
     def startup(self, persistent):
         self.persist = persistent
         color = self.persist["screen_color"]
         self.screen_color = pg.Color(color)
+        self.fancy_text_1 = self.persist["fancy_text_1"]
+        persistent["fancy_text_1"] = self.fancy_text_1
 
     def render_text(self, index):
         color = pg.Color("red") if index == self.active_index else pg.Color("white")
@@ -49,7 +53,13 @@ class MainMenu(BaseState):
         background = BackGround(constants.DEFAULT_BACKGROUND, [0, 0])
         surface.fill([255, 255, 255])
         surface.blit(background.image, background.rect)
+
+        self.fancy_text_1.draw(self.screen, constants.TITLE, 320, 75)
+
         for index, option in enumerate(self.options):
             text_render = self.render_text(index)
             surface.blit(text_render, self.get_text_position(
                 text_render, index))
+
+    def update(self, dt):
+        self.fancy_text_1.update()

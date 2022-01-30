@@ -9,6 +9,7 @@ SPRITE_SHEET = './assets/images/spritesheet.png'
 DEFAULT_FONT = './assets/fonts/BarcadeBrawlRegular.ttf'
 DEFAULT_BACKGROUND = './assets/images/background.png'
 DEFAULT_FONT_SIZE = 18
+TITLE_FONT_SIZE = 24
 TXT_GAME_OVER = 'Press ENTER to go to main menu, R to restart or ESC to quit'
 TXT_CREDITS = 'This game was written by ...'
 PLAY_SOUNDS = True
